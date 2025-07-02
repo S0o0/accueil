@@ -1,5 +1,6 @@
 /* Fond général du body */
-html, body {
+html,
+body {
     background: linear-gradient(135deg, #e0f7fa, #cceeff);
     margin: 0;
     padding: 0;
@@ -100,6 +101,26 @@ html, body {
     transform-style: preserve-3d;
 }
 
+
+
+/* Animation douce de pulsation */
+.hub-image:not(#logo-img) {
+    animation: pulseScale 3s ease-in-out infinite;
+}
+
+/* Animation des images */
+@keyframes pulseScale {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+}
+
 /* Animation au survol */
 .hub-image-link:hover .hub-image {
     transform: scale(1.07) rotateX(3deg) rotateY(3deg);
@@ -128,10 +149,24 @@ html, body {
     margin-top: 1rem;
     letter-spacing: 0.4px;
     transition: transform 0.3s ease, color 0.3s ease;
+    animation: pulseText 4s ease-in-out infinite;
 }
 
+@keyframes pulseText {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
 .hub-image-link:hover h3 {
-    color: #007BFF;
+    animation: none;
     transform: translateY(-2px);
 }
 
