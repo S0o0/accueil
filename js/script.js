@@ -1,5 +1,4 @@
 window.addEventListener("DOMContentLoaded", () => {
-    // Cacher le contenu principal
     const mainContent = document.getElementById("main-content");
 
     // Création du splash screen
@@ -13,14 +12,16 @@ window.addEventListener("DOMContentLoaded", () => {
     // Désactive le scroll
     document.body.style.overflow = "hidden";
 
-    // Supprimer le splash après 2.5 secondes
+    // Supprimer le splash après 1.5s
     setTimeout(() => {
         splash.classList.add("fade-out");
 
+        // Attendre la fin de l'opacité (0.8s) avant de retirer l'élément
         setTimeout(() => {
             splash.remove();
-            mainContent.style.display = "block"; // Affiche le vrai contenu
-            document.body.style.overflow = "auto"; // Rétablit le scroll
-        }, 500);
-    }, 2500);
+            mainContent.style.display = "block";
+            mainContent.classList.add("fade-in"); // déclenche l'animation
+            document.body.style.overflow = "auto";
+        }, 800);
+    }, 1500);
 });

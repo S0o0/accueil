@@ -19,4 +19,5 @@
 #splash-screen.fade-out {
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.8s ease;
 }

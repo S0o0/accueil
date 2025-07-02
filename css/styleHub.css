@@ -102,3 +102,18 @@ body {
 #main-content {
     display: none;
 }
+
+/* Fondu d’apparition pour le contenu principal */
+#main-content.fade-in {
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
