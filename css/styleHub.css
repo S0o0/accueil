@@ -151,7 +151,6 @@ body {
 /* Image du logo */
 #logo-img {
     height: 100px;
-    /* Ajuste selon ton logo */
     max-width: 200px;
     object-fit: contain;
 }
