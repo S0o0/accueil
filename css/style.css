@@ -1,0 +1,96 @@
+/* Fond général du body */
+body {
+    background: linear-gradient(135deg, #e0f7fa, #cceeff);
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Conteneur général */
+#hub-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Titre principal */
+#hub-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+/* Grille d’images */
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Élément contenant un lien */
+.hub-item {
+    width: 100%;
+    max-width: 250px;
+}
+
+/* Lien contenant image + titre */
+.hub-image-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Image */
+.hub-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Survol image */
+.hub-image-link:hover .hub-image {
+    transform: scale(1.05);
+}
+
+/* Titre sous l’image */
+.hub-caption {
+    margin-top: 0.6rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+/* Supprimer tout soulignement éventuel */
+.hub-image-link h3 {
+    text-decoration: none;
+}
+
+/* Survol du lien = changement du titre */
+.hub-image-link:hover .hub-caption {
+    color: #007BFF;
+    /* bleu au survol, personnalisable */
+}
+
+/* Conteneur du logo */
+#logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Image du logo */
+#logo-img {
+    height: 80px;
+    /* Ajuste selon ton logo */
+    max-width: 200px;
+    object-fit: contain;
+}
