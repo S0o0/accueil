@@ -35,8 +35,49 @@ body {
 
 /* Élément contenant un lien */
 .hub-item {
-    width: 100%;
-    max-width: 250px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal 0.6s ease forwards;
+}
+
+
+.hub-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.hub-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.hub-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.hub-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.hub-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.hub-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.hub-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.hub-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Lien contenant image + titre */
@@ -47,18 +88,22 @@ body {
     text-decoration: none;
 }
 
-/* Image */
+/* Image moderne animée */
 .hub-image {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
 }
 
-/* Survol image */
+/* Animation au survol */
 .hub-image-link:hover .hub-image {
-    transform: scale(1.05);
+    transform: scale(1.07) rotateX(3deg) rotateY(3deg);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.3);
+    /* effet glow bleu */
 }
 
 /* Titre sous l’image */
@@ -72,10 +117,23 @@ body {
     text-decoration: none;
 }
 
-/* Supprimer tout soulignement éventuel */
+/* Style moderne des titres */
 .hub-image-link h3 {
     text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    margin-top: 1rem;
+    letter-spacing: 0.4px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.hub-image-link:hover h3 {
+    color: #007BFF;
+    transform: translateY(-2px);
+}
+
 
 /* Survol du lien = changement du titre */
 .hub-image-link:hover .hub-caption {
@@ -92,7 +150,7 @@ body {
 
 /* Image du logo */
 #logo-img {
-    height: 80px;
+    height: 100px;
     /* Ajuste selon ton logo */
     max-width: 200px;
     object-fit: contain;
