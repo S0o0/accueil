@@ -149,7 +149,7 @@ body {
     margin-top: 1rem;
     letter-spacing: 0.4px;
     transition: transform 0.3s ease, color 0.3s ease;
-    animation: pulseText 4s ease-in-out infinite;
+    animation: pulseText 3s ease-in-out infinite;
 }
 
 @keyframes pulseText {
@@ -166,7 +166,7 @@ body {
 
 
 .hub-image-link:hover h3 {
-    animation: none;
+    color: #007BFF;
     transform: translateY(-2px);
 }
 
