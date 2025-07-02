@@ -25,7 +25,10 @@ body {
 /* Grille d’images */
 #image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes fixes */
+    grid-auto-rows: auto;
+    /* Laisse la hauteur s'adapter au contenu */
     gap: 2rem;
     justify-items: center;
 }
@@ -46,8 +49,8 @@ body {
 
 /* Image */
 .hub-image {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease;
